@@ -1,35 +1,24 @@
-# Serveur de Scraping Anime-Sama
+# Serveur de Scraping Railway
 
-## Déploiement sur Vercel (Gratuit)
+## Déploiement sur Railway (Gratuit)
 
-1. **Créer un compte Vercel** : https://vercel.com
-2. **Installer Vercel CLI** :
-   ```bash
-   npm i -g vercel
-   ```
-3. **Déployer** :
-   ```bash
-   cd scraper-server
-   vercel --prod
-   ```
+1. **Créer un compte Railway** : https://railway.app
+2. **Connecter votre repo GitHub**
+3. **Déployer automatiquement**
 
-## Utilisation
+## Avantages Railway
+- ✅ 500h gratuites/mois
+- ✅ Déploiement Git automatique
+- ✅ Base de données incluse
+- ✅ Logs en temps réel
+- ✅ Variables d'environnement
 
-Une fois déployé, votre API sera disponible à :
-```
-https://votre-projet.vercel.app/api/scrape?url=https://anime-sama.fr/catalogue/demon-slayer/
-```
+## Variables d'environnement (optionnelles)
+- `PORT` : Port du serveur (auto-détecté)
+- `FLASK_ENV` : production
 
-## Test local
-
-```bash
-pip install -r requirements.txt
-vercel dev
-```
-
-## Avantages Vercel
-- ✅ Gratuit (500GB de bande passante/mois)
-- ✅ Déploiement automatique
-- ✅ HTTPS inclus
-- ✅ Pas de configuration serveur
-- ✅ Scaling automatique
+## Endpoints
+- `GET /` : Documentation de l'API
+- `GET /health` : Vérification du statut
+- `GET /scrape?url=...` : Scraper un anime
+- `POST /scrape` : Scraper un anime (JSON body)
