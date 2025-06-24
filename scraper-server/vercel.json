@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/scrape.py": {
-      "runtime": "python3.9"
-    }
-  }
-}
